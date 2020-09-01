@@ -3,12 +3,14 @@
         <title>Tạo Form</title>
         <style>
             .wufoo{
-                font-family: "Lucida Grande","Lucida Sans Unicode",  Tahoma, sans-serif;
+                font-family: 'Times New Roman', Times, serif;
                 }
         </style>
     </head>
     <body>
         <form action="simpleform" method="get" class="wufoo">
+            <fieldset>
+            <legend><strong><i>Bảng mua sắm</i></strong></legend>
             <h2>Order Form</h2>
             <p>Bạn muốn mua gì ?</p>
             <select>
@@ -29,6 +31,7 @@
             <input type="text" name="phone3" size="5">
             <br><br>
             <p><input type="button" name="btSubmit" value="Submit"></p>
+            </fieldset>
         </form>
     </body>
 </html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Tạo Form</title>
+        <style>
+            .wufoo{
+                font-family: 'Times New Roman', Times, serif;
+                }
+
+            .title{
+                text-align: center;
+                font-size:23px;
+                color: white;
+                background-color: tomato;
+            }
+            .chu{
+                color: teal;
+                text-align: center;
+            }
+            .chudo{
+                color: red;
+            }
+            .cangle{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="simpleform" method="get" class="wufoo">
+                <p class="title">SỞ THÍCH CỦA BẠN</p>
+                <p class="chu"> Họ và tên <input type="text" name="yourname"></p>
+                <p class="chu"> Email <input type="text" name="email"></p>
+                <p class="chu"> Sở Thích
+                <label><input name="hobby" value="hobby" type="checkbox" checked/>Thể Thao</label>
+                <label><input name="hobby" type="checkbox" checked/>Âm Nhạc</label>
+                <label><input name="hobby" type="checkbox" checked/>Đọc sách</label> <br>
+                <label><input name="hobby" type="checkbox" checked/>Lướt web</label>
+                <label><input name="hobby" type="checkbox" checked/>Chơi Game</label>
+                <label><input name="hobby" type="checkbox" checked/>Điện Ảnh</label> <br>
+                <label><input name="hobby" type="checkbox" checked/>Du Lịch</label> <br></p>
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+        </form>
+    </body>
+</html>

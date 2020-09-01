@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Form Đăng Ký</title>
+        <style>
+            .text{
+                font-size:11px;
+                margin-top: 3px;
+                margin-left: 23px;
+            }
+            .text2{
+                font-size:11px;
+                margin-top: 3px;
+                margin-left: 43px;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child() {
+                background-color:saddlebrown;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moment to complete this satifaction survey.</p>
+            <hr>
+            <strong>Bạn bao nhiêu tuổi ?</strong> <br>
+            <select name="age">
+                <option value="18">18-24</option>
+                <option value="25">25-34</option>
+                <option value="35">35-50</option>
+                <option value="50">50+</option>
+            </select> <br> <br>
+            <strong>Thu nhập hằng năm của bạn bao nhiêu ?</strong> <br>
+            <select name="range">
+                <option value="0">$0 - $25000</option>
+                <option value="25">$25000 - $50000</option>
+                <option value="50">$50000 - $100000</option>
+                <option value="100">$100000+</option>
+            </select> <br> <br>
+            <strong>Giới tính:</strong> <br>
+            <input type="radio" name="gender" value="Nam">Nam <br>
+            <input type="radio" name="gender" value="Nữ">Nữ <br>
+            <input type="radio" name="gender" value="Non">Non <br>
+            <input type="radio" name="gender" value="Khác">Khác <br>
+            <input name="gender" type="text"/> <br> <br>
+            <strong>Which of the following products have your purchased in the last 2 months. Please check all that apply.</strong> <br>
+            <input type="checkbox" name="gender" value="Nam">Product 1 <br>
+            <input type="checkbox" name="gender" value="Nữ">Product 2 <br>
+            <input type="checkbox" name="gender" value="Non">Product 3 <br> <br>
+            <strong>Bạn có thường mua sắm không ?</strong> <br>
+            <input type="radio" name="daily" value="Nam">Daily <br>
+            <input type="radio" name="daily" value="Nữ">Weekly <br>
+            <input type="radio" name="daily" value="Non">Monthly <br> <br>
+            <strong>Bạn trả bao nhiêu cho sản phẩm mới ?</strong> <br>
+            $<input type="text" name="text1" size="5">.  <input type="text" name="text2" size="2"> <br>
+            <span class="text">Dollars</span>  <span Cent class="text2">Cents</span>
+            <br> <br>
+            <strong>What features would you like to see in the new product.</strong> <br>
+            <textarea cols="100" rows="3"></textarea> <br>
+            <p>Chọn các cấp dịch vụ:</p>
+            <table>
+                <tr>
+                  <th></th>
+                  <th>Strong Disagree</th>
+                  <th>Disagree</th>
+                  <th>Agree</th>
+                  <th>Strong Agree</th>
+                </tr>
+                <tr>
+                    <td>Our products are price fairly.</td>
+                    <td><input type="radio" name="table" value=""><br>1</td>
+                    <td><input type="radio" name="table" value=""><br>2</td>
+                    <td><input type="radio" name="table" value=""><br>3</td>
+                    <td><input type="radio" name="table" value=""><br>4</td>
+                </tr>
+                <tr>
+                    <td>Our products are high quaitly.</td>
+                    <td><input type="radio" name="table" value=""><br>1</td>
+                    <td><input type="radio" name="table" value=""><br>2</td>
+                    <td><input type="radio" name="table" value=""><br>3</td>
+                    <td><input type="radio" name="table" value=""><br>4</td>
+                </tr>
+                <tr>
+                    <td>You would recommend our product to a friend or coworker.</td>
+                    <td><input type="radio" name="table" value=""><br>1</td>
+                    <td><input type="radio" name="table" value=""><br>2</td>
+                    <td><input type="radio" name="table" value=""><br>3</td>
+                    <td><input type="radio" name="table" value=""><br>4</td>
+                </tr>
+            </table>
+            <input type="text" value="Submit">
+        </form> 
+    </body>
+</html>
