@@ -14,31 +14,30 @@
             }
             .chu{
                 color: teal;
-                text-align: center;
             }
             .chudo{
                 color: red;
             }
-            .cangle{
-                text-align: center;
-            }
+            
         </style>
     </head>
     <body>
-        <form action="simpleform" method="get" class="wufoo">
+        <form action="simpleform" method="get" class="wufoo";">
+                <center>
                 <p class="title">SỞ THÍCH CỦA BẠN</p>
-                <p class="chu"> Họ và tên <input type="text" name="yourname"></p>
-                <p class="chu"> Email <input type="text" name="email"></p>
-                <p class="chu"> Sở Thích
-                <label><input name="hobby" value="hobby" type="checkbox" checked/>Thể Thao</label>
-                <label><input name="hobby" type="checkbox" checked/>Âm Nhạc</label>
-                <label><input name="hobby" type="checkbox" checked/>Đọc sách</label> <br>
-                <label><input name="hobby" type="checkbox" checked/>Lướt web</label>
-                <label><input name="hobby" type="checkbox" checked/>Chơi Game</label>
-                <label><input name="hobby" type="checkbox" checked/>Điện Ảnh</label> <br>
-                <label><input name="hobby" type="checkbox" checked/>Du Lịch</label> <br></p>
+                <label class="chu"> Họ và tên <input type="text" name="yourname"></label> <br> <br>
+                <label class="chu"> Email <input type="text" name="email"></label> <br> <br>
+                <label class="chu"> Sở Thích
+                <label class="chudo"><input name="hobby" value="hobby" type="checkbox"/>Thể Thao</label>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Âm Nhạc</label>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Đọc sách</label> <br>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Lướt web</label>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Chơi Game</label>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Điện Ảnh</label> <br>
+                <label class="chudo"><input name="hobby" type="checkbox"/>Du Lịch</label> <br></p>
                 <input type="submit" value="Gửi thông tin">
                 <input type="reset" value="Nhập lại">
+                </center>
         </form>
     </body>
 </html>

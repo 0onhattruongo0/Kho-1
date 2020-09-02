@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Form đơn giản 2</title>
+        <style>
+            .title{
+                text-align: left;
+                font-size:23px;
+                color: rgb(18, 30, 196);
+                background-color:rgb(108, 173, 233);
+            }
+            .chu{
+                color:rgb(250, 59, 59);
+            }
+        </style>
+    </head>
+    <body style="background-color: wheat;">
+        <table>
+            <tr>
+                <th class="title" colspan="2">ĐĂNG KÝ HỌC VIÊN</<font></th>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Họ và tên</label>  
+                </td>
+                <td>
+                    <input type="text" name="name"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Ngày sinh</label>
+                </td>
+                <td>
+                    <input type="text" name="birthday">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Giới tính</label>    
+                </td>
+                <td>
+                    <input type="radio" name="customer_gender" value="nam"><span>Nam</span>
+                    <input type="radio" name="customer_gender" value="nu"><span>Nữ</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Địa chỉ</label>
+                </td>
+                <td>
+                    <textarea cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Lớp</label>
+                </td>
+                <td>
+                    <select name="class">
+                        <option value="class">-Chọn lớp-</option>
+                        <option value="class">10A1</option>
+                        <option value="class">10A2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Email</label>
+                </td>
+                <td>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="chu">Điện thoại</label>
+                </td>
+                <td>
+                    <input type="text" name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="submit" value="Đăng ký">
+                    <input type="reset" name="reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
