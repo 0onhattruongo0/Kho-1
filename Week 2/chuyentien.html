@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JS</title>
+        <style>
+            table{
+                width: 800px;
+            }
+            td{
+                width: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Curency</th>
+                <th>To Curency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="money" id="money"></td>
+                <td><select id="tiengoc">
+                    <option value="VNĐ">VietNam</option>
+                    <option value="USD">USD</option>
+                </select></td>
+                <td><select id="tiendoi">
+                    <option value="VND">VietNam</option>
+                    <option value="USD">USD</option>
+                </select></td>
+                <td><button type="submit" onclick='chuyendoi()'>Convert</button></td>
+            </tr>
+        </table>
+
+        <div id="result"></div>
+    </body>
+    <script>
+        function chuyendoi(){
+            let money = +document.getElementById('money').value;
+            let tiengoc = document.getElementById('tiengoc').value;
+            let tiendoi = document.getElementById('tiendoi').value;
+
+            if(tiengoc=="USD" && tiendoi =="VND"){
+                let result = money*23000;
+                document.getElementById("result").innerHTML = "Result: " + result + " VND";
+            }
+            else{
+                let result = money/23000;
+                document.getElementById("result").innerHTML = "Result: " + result + " USD";
+            }
+            
+        }
+    </script>
+</html>
