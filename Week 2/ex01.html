@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        let name = prompt('Nhập tên đăng nhập: ');
+        
+        if (name == 'admin') {
+            let pass = prompt('Nhập mật khẩu: ');
+            if (pass == 'themaster') {
+                alert('Welcome');
+            } else if (pass == 'null') {
+                alert('Canceled');
+            } else alert('Wrong Password')
+        } else if (name == 'null') {
+            alert('Canceled');
+        } else alert("I dont'n know you")
+
+    </script>
+</html>
