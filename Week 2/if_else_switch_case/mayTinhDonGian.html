@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Máy tính</title>
+        <style>
+            table {
+                width: 200px;
+                height: 250px;
+                text-align:center;
+            }
+            th {
+                width: 200px;
+            }
+            td {
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+        <fieldset style="width: 200px">
+        <table>
+            <tr>
+                <th colspan="4">
+                    <input type="text" id='ketqua' style="width: 200px">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="1" onclick="ketqua.value+=this.value">1</button>
+                </td>
+                <td>
+                    <button type="button" value="2" onclick="ketqua.value+=this.value">2</button>
+                </td>
+                <td>
+                    <button type="button" value="3" onclick="ketqua.value+=this.value">3</button>
+                </td>
+                <td>
+                    <button type="button" value="+" onclick="ketqua.value+=this.value">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="4" onclick="ketqua.value+=this.value">4</button>
+                </td>
+                <td>
+                    <button type="button" value="5" onclick="ketqua.value+=this.value">5</button>
+                </td>
+                <td>
+                    <button type="button" value="6" onclick="ketqua.value+=this.value">6</button>
+                </td>
+                <td>
+                    <button type="button" value="-" onclick="ketqua.value+=this.value">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="7" onclick="ketqua.value+=this.value">7</button>
+                </td>
+                <td>
+                    <button type="button" value="8" onclick="ketqua.value+=this.value">8</button>
+                </td>
+                <td>
+                    <button type="button" value="9" onclick="ketqua.value+=this.value">9</button>
+                </td>
+                <td>
+                    <button type="button" value="*" onclick="ketqua.value+=this.value">x</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="reset">C</button>
+                </td>
+                <td>
+                    <button type="button" value="0" onclick="ketqua.value+=this.value">0</button>
+                </td>
+                <td>
+                    <button type="button" value="=" onclick="ketqua.value=eval(ketqua.value)">=</button>
+                </td>
+                <td>
+                    <button type="button" value="/" onclick="ketqua.value+=this.value">/</button>
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+        </form>
+    </body>
+    <script>
+        
+    </script>
+</html>
