@@ -1,24 +1,22 @@
 <html>
-    <head>
-        <title>Do You Love Me?</title>
-        <style>
-        </style>
-    </head>
-    <body>
-
-        <h1>Do You Love Me?</h1>  
-        <button onclick="Yes()">Yes</button>
-        <button onmouseover='No()' id='demo' style="position:absolute">No</button>
-    </body>
-    <script>
-        function Yes() {
-            alert('<3');
-        }
-        function No() {
-            let w = window.innerWidth*Math.random();
-            let h = window.innerHeight*Math.random();
-            document.getElementById('demo').style.left = w + 'px';
-            document.getElementById('demo').style.top = h + 'px';
-        }
-    </script>
+  <head>
+    <title>Do You Love Me?</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Do You Love Me?</h1>
+    <button onclick="Yes()">Yes</button>
+    <button onmouseover="No()" id="demo" style="position: absolute">No</button>
+  </body>
+  <script>
+    function Yes() {
+      alert("<3");
+    }
+    function No() {
+      let w = window.innerWidth * Math.random();
+      let h = window.innerHeight * Math.random();
+      document.getElementById("demo").style.left = w + "px";
+      document.getElementById("demo").style.top = h + "px";
+    }
+  </script>
 </html>

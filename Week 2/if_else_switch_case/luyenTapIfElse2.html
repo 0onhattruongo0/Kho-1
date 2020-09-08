@@ -1,0 +1,23 @@
+<html>
+  <head> </head>
+  <body>
+    <input type="text" id="money" />Nhập số tiền ban đầu <br />
+    <input type="text" id="month" />Nhập số tháng cho vay <br />
+    <input type="text" id="lai" />Nhập lãi xuất hàng tháng <br />
+    <button type="submit" onclick="tinhtien()">Tính tiền lãi</button>
+
+    <div id="result"></div>
+  </body>
+</html>
+<script>
+  function tinhtien() {
+    let money = +document.getElementById("money").value;
+    let month = +document.getElementById("month").value;
+    let lai = +document.getElementById("lai").value;
+
+    let totalmoney = money * Math.pow(lai + 1, month);
+    let result = totalmoney - money;
+    document.getElementById("result").innerHTML =
+      "Số tiền lãi tính được là: " + result;
+  }
+</script>
