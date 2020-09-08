@@ -1,0 +1,171 @@
+Bài tập 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let a = +prompt('Nhập số a =');
+    let b = +prompt('Nhập số b =');
+
+    if (a%b == 0) {
+        alert('a chia hết cho b')
+    } else {
+        alert('a ko chia hết cho b')
+    }
+</script>
+
+Bài tập 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let age = +prompt('Nhập số tuổi của học sinh =');
+
+    if (age >= 14) {
+        alert('Học sinh đủ tuổi học lớp 10')
+    } else {
+        alert('Học sinh chưa đủ tuổi')
+    }
+</script>
+
+Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let number = parseInt(prompt('Nhập số cần tìm ='));
+
+    if (number > 0) {
+        alert('Số lớn hơn 0')
+    } else if (number < 0) {
+        alert(' Số nhỏ hơn 0')
+    } else {
+        alert(' Số bằng 0')
+    }
+</script>
+
+Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let a = parseInt(prompt('Nhập số a ='));
+    let b = parseInt(prompt('Nhập số b ='));
+    let c = parseInt(prompt('Nhập số c ='));
+    let max = a;
+
+    if (b > max) {
+        if (b>c) {
+            let max = b;
+            alert('Số lớn nhất là: ' + max)
+        } else {
+            let max = c;
+            alert('Số lớn nhất là: ' + max)
+        }
+    } else if (c>max) {
+        let max = c;
+        alert('Số lớn nhất là: ' + max)
+    } else {
+        alert('Số lớn nhất là: ' + max)
+    }
+    
+</script>
+
+Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let kiemtra = parseInt(prompt('Nhập điểm kiểm tra ='));
+    let giuaky = parseInt(prompt('Nhập điểm giữa kỳ ='));
+    let cuoiky = parseInt(prompt('Nhập diểm cuối kỳ ='));
+    let avr = (kiemtra + giuaky*2 + cuoiky*3)/6
+
+    if (avr > 8) {
+        alert('Học sinh giỏi');
+    } else if (avr>6.5) {
+        alert('Học sinh khá')
+    } else if (avr>5) {
+        alert('Học sinh trung bình')
+    } else {
+        alert('Học sinh yếu')
+    }
+    
+</script>
+
+Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    let doanhso = +prompt('Nhập doanh số bán hàng: ');
+    let hoahong = 0;
+    if (doanhso > 40) {
+        let hoahong = 0.2;
+        let tienluong = doanhso*hoahong
+        document.write('Tiền lương là: ' + tienluong);
+    } else if (doanhso>30) {
+        let hoahong = 0.15;
+        let tienluong = doanhso*hoahong
+        document.write('Tiền lương là: ' + tienluong);
+    } else if (doanhso>20) {
+        let hoahong = 0.1;
+        let tienluong = doanhso*hoahong
+        document.write('Tiền lương là: ' + tienluong);
+    } else {
+        let hoahong = 0.05;
+        let tienluong = doanhso*hoahong
+        document.write('Tiền lương là: ' + tienluong);
+    }
+    
+</script>
+
+Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+<html>
+    <head></head>
+    <body>
+        <input type="text" id='time'>Thời gian gọi (số giây)</input> <br> <br>
+        <select id="nhamang">
+            <option value="VNPT">VNPT</option>
+            <option value="Viettel">Viettel</option>
+            <option value="Vinaphone">Vinaphone</option>
+        </select> <br> <br>
+        <button type="submit" id='money' onclick="tinhtoan()">Tính tiền</button>
+        <br><br>
+        <div id='result'></div>
+    </body>
+</html>
+<script>
+    function tinhtoan() {
+    let time = +document.getElementById('time').value;
+    let nhamang = document.getElementById('nhamang').value;
+    
+    if (nhamang == 'VNPT'){
+        let result = time*15
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    } else if (nhamang == 'Viettel') {
+        let result = time*12
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    } else {
+        let result = time*10
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    }
+    }
+</script>

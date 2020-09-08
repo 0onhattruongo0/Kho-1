@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id='time'>Thời gian gọi (số giây)</input> <br> <br>
+        <select id="nhamang">
+            <option value="VNPT">VNPT</option>
+            <option value="Viettel">Viettel</option>
+            <option value="Vinaphone">Vinaphone</option>
+        </select> <br> <br>
+        <button type="submit" id='money' onclick="tinhtoan()">Tính tiền</button>
+        <br><br>
+        <div id='result'></div>
+    </body>
+</html>
+<script>
+    function tinhtoan() {
+    let time = +document.getElementById('time').value;
+    let nhamang = document.getElementById('nhamang').value;
+    
+    if (nhamang == 'VNPT'){
+        let result = time*15
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    } else if (nhamang == 'Viettel') {
+        let result = time*12
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    } else {
+        let result = time*10
+        document.getElementById('result').innerHTML= 'Số tiền cần trả = ' + result
+    }
+    }
+</script>
