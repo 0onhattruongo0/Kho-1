@@ -21,31 +21,10 @@
 </head>
 
 <body onload="init()">
-    <img id="ball" on="" src="right.jpg">
-
-    <!-- <br>
-    <input type="button" value="click to move the ball" onclick="controllBall()"> -->
-    <table style="position: fixed; left: 0px; top:200px; display: none;">
-        <tr>
-            <td></td>
-            <td><button onclick="moveToUp()">&#8593;</button></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><button onclick="moveToLeft()">&#8592;</button></td>
-            <td></td>
-            <td><button onclick="moveToRight()">&#8594;</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button onclick="moveToBottom()">&#8595;</button></td>
-            <td></td>
-        </tr>
-    </table>
+    <img src="./right.jpg" alt="" id='ball'>
 </body>
 
 <script>
-    var tran = "";
 
     function init() {
         var ball = document.getElementById("ball");
@@ -60,7 +39,7 @@
 
     function moveToRight() {
         var ball = document.getElementById("ball");
-        ball.src = "right.jpg";
+        ball.src = "./right.jpg";
         ball.style.width = "200px";
         ball.style.height = "100px";
         var ballWidth = parseInt(ball.style.width);
@@ -74,7 +53,7 @@
 
     function moveToLeft() {
         var ball = document.getElementById("ball");
-        ball.src = "left.jpg";
+        ball.src = "./left.jpg";
         ball.style.width = "200px";
         ball.style.height = "100px";
         if (parseInt(ball.style.left) > 0) {
@@ -88,7 +67,7 @@
     function moveToBottom() {
         var ball = document.getElementById("ball");
         var ballHeight = parseInt(ball.style.height);
-        ball.src = "bottom.jpg";
+        ball.src = "./bottom.jpg";
         ball.style.width = "100px";
         ball.style.height = "200px";
         if ((parseInt(ball.style.top) + ballHeight + 10) < window.innerHeight) {
@@ -100,7 +79,7 @@
 
     function moveToUp() {
         var ball = document.getElementById("ball");
-        ball.src = "top.jpg";
+        ball.src = "./top.jpg";
         ball.style.width = "100px";
         ball.style.height = "200px";
         if (parseInt(ball.style.top) > 0) {
