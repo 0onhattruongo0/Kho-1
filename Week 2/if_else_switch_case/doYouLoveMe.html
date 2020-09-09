@@ -1,12 +1,27 @@
 <html>
   <head>
     <title>Do You Love Me?</title>
-    <style></style>
+    <style>
+      div {
+        margin-left: 200px;
+        margin-top: 200px;
+      }
+      div2 {
+        margin-left: 100px;
+      }
+      
+    </style>
   </head>
   <body>
-    <h1>Do You Love Me?</h1>
-    <button onclick="Yes()">Yes</button>
-    <button onmouseover="No()" id="demo" style="position: absolute">No</button>
+    <div>
+      <h1>Do You Love Me?</h1>
+        <button onclick="Yes()">Yes</button>
+        <div2>
+          <button onmouseover="No()" id="demo" style="position: absolute">
+            No
+          </button>
+        </div2>
+    </div>
   </body>
   <script>
     function Yes() {

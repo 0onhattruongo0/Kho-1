@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            button, img {
+               
+            }
+        </style>
+    </head>
+    <body>
+        <button><img src="./img/funny-cat1_part1x1.jpg" onclick="myFunction(this, this.id)" id="cat1"></button>
+        <button><img src="./img/funny-cat1_part2x1.jpg" onclick="myFunction(this, this.id)" id='cat2'></button>
+        <button><img src="./img/funny-cat1_part3x1.jpg" onclick="myFunction(this, this.id)" id='cat3'></button>
+        <button><img src='./img/funny-cat1_part4x1.jpg' onclick="myFunction(this, this.id)" id='cat4'></button>
+        <button><img src='./img/funny-cat1_part5x1.jpg' onclick="myFunction(this, this.id)" id='cat5'></button>
+    </body>
+</html>
+<script>
+    let a = ['funny-cat1_part1x1.jpg','monkey_part1x1.jpg','panda_swap_part1x1.jpg'];
+    let b = ['funny-cat1_part2x1.jpg','monkey_part2x1.jpg','panda_swap_part2x1.jpg'];
+    let c = ['funny-cat1_part3x1.jpg','monkey_part3x1.jpg','panda_swap_part3x1.jpg'];
+    let d = ['funny-cat1_part4x1.jpg','monkey_part4x1.jpg','panda_swap_part4x1.jpg'];
+    let e = ['funny-cat1_part5x1.jpg','monkey_part5x1.jpg','panda_swap_part5x1.jpg'];
+    function myFunction(img, i) {
+        switch (i) {
+            case 'cat1':
+                img.src = "./img/" + a[Math.floor(Math.random()*3)];
+                break;
+            case 'cat2':
+                img.src = "./img/" + b[Math.floor(Math.random()*3)];   
+                break;
+            case 'cat3':
+                img.src = "./img/" + c[Math.floor(Math.random()*3)];
+                break;
+            case 'cat4':
+                img.src = "./img/" + d[Math.floor(Math.random()*3)];
+                break;
+            case 'cat5':
+                img.src = "./img/" + e[Math.floor(Math.random()*3)];
+                break;
+        }
+    }
+</script>

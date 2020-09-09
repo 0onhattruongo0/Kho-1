@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>switch 3</title>
-</head>
-<body>
-    
-</body>
-<script>
+  </head>
+  <body></body>
+  <script>
     //code vào đây
-    let value = parseInt(prompt('Nhập giá trị: '));
-    
-    switch ((value > 0) ? 1 : (value < 0) ? -1 : 0 ) {
-        case 1:
-            alert(1);
-            break;
-        case -1:
-            alert(-1);
-            break;
-        default:
-            alert(0);
+    let value = parseInt(prompt("Nhập giá trị: "));
+
+    switch (value > 0 ? 1 : value < 0 ? -1 : 0) {
+      case 1:
+        alert(1);
+        break;
+      case -1:
+        alert(-1);
+        break;
+      default:
+        alert(0);
     }
-    </script>
+  </script>
 </html>

@@ -1,46 +1,49 @@
 <html>
-    <head>
-        <title>JS</title>
-        <style>
-        </style>
-    </head>
-    <body>
-        <h1>Caculator</h1>
-        <input type="text" id="text1">
-        <input type="text" id="text2">
-        <br>
-        <br>
-        <button type="button" onclick="phepcong()">Cong +</button>
-        <button type="button" onclick="pheptru()">Tru -</button>
-        <button type="button" onclick="phepnhan()">Nhan x</button>
-        <button type="button" onclick="phepchia()">Chia /</button>
+  <head>
+    <title>JS</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Caculator</h1>
+    <input type="text" id="text1" />
+    <input type="text" id="text2" />
+    <br />
+    <br />
+    <button type="button" onclick="phepcong()">Cong +</button>
+    <button type="button" onclick="pheptru()">Tru -</button>
+    <button type="button" onclick="phepnhan()">Nhan x</button>
+    <button type="button" onclick="phepchia()">Chia /</button>
 
-        <div id="result"></div>
-    </body>
-    <script>
-        function phepcong(){
-            let a = +document.getElementById('text1').value;
-            let b = +document.getElementById('text2').value;
-            let result = a + b
-            document.getElementById('result').innerHTML = 'Kết quả phép cộng = ' + result
-        }
-        function pheptru(){
-            let a = +document.getElementById('text1').value;
-            let b = +document.getElementById('text2').value;
-            let result = a - b
-            document.getElementById('result').innerHTML = 'Kết quả phép trừ = ' + result
-        }
-        function phepnhan(){
-            let a = +document.getElementById('text1').value;
-            let b = +document.getElementById('text2').value;
-            let result = a * b
-            document.getElementById('result').innerHTML = 'Kết quả phép trừ = ' + result
-        }
-        function phepchia(){
-            let a = +document.getElementById('text1').value;
-            let b = +document.getElementById('text2').value;
-            let result = a / b
-            document.getElementById('result').innerHTML = 'Kết quả phép trừ = ' + result
-        }
-    </script>
+    <div id="result"></div>
+  </body>
+  <script>
+    function phepcong() {
+      let a = +document.getElementById("text1").value;
+      let b = +document.getElementById("text2").value;
+      let result = a + b;
+      document.getElementById("result").innerHTML =
+        "Kết quả phép cộng = " + result;
+    }
+    function pheptru() {
+      let a = +document.getElementById("text1").value;
+      let b = +document.getElementById("text2").value;
+      let result = a - b;
+      document.getElementById("result").innerHTML =
+        "Kết quả phép trừ = " + result;
+    }
+    function phepnhan() {
+      let a = +document.getElementById("text1").value;
+      let b = +document.getElementById("text2").value;
+      let result = a * b;
+      document.getElementById("result").innerHTML =
+        "Kết quả phép trừ = " + result;
+    }
+    function phepchia() {
+      let a = +document.getElementById("text1").value;
+      let b = +document.getElementById("text2").value;
+      let result = a / b;
+      document.getElementById("result").innerHTML =
+        "Kết quả phép trừ = " + result;
+    }
+  </script>
 </html>
