@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dudoan()">play</button>
+    <script>
+        function dudoan(){
+            let doanso = +prompt("nhập số ");
+            let sodung = Math.floor(Math.random());
+            for (let i = 0 ; i <3; i++){
+            if (doanso == sodung){
+                alert("bingo");
+            }else if (doanso < sodung){
+                alert("so doan be hon so dung");
+                doanso = +prompt("nhập số từ 0-10");
+            }else if (doanso > sodung){
+                alert("so doan lớn hon so dung");
+                doanso = +prompt("nhập số từ 0-10");
+        }
+        }}
+    </script>
+</body>
+</html>

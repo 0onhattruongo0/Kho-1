@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+        <input type="text" id='min' placeholder="giá trị nhỏ nhất">  <input type="text" id='max' placeholder="giá trị lớn nhất">Khoảng giá trị muốn nhập vào
+        <br>
+        <input type="text" id='guess'>Số người dùng sẽ đoán
+        <br> 
+        <br>
+        <button type="button" id='play' onclick='playGame();'>Chơi</button> <input type="button" value="Reset Form" onClick="this.form.reset()" />
+        <br>    
+        <p id='result'></p>
+    </form>
+  </body>
+</html>
+<script>
+   
+
+    function playGame() {
+        let min= +document.getElementById('min').value;
+        let max= +document.getElementById('max').value;
+        let guess=document.getElementById('guess').value;
+        let i = Math.floor(Math.random() * (max - min + 1)) + min;
+   
+        if (guess==i) {
+            document.getElementById('result').innerHTML = 'Chúc mừng bạn đã đúng';
+        } else if (guess>i) {
+            document.getElementById('result').innerHTML = 'Số bạn chọn lớn hơn';
+        } else if (guess<i) {
+            document.getElementById('result').innerHTML = 'Số bạn chọn bé hơn';
+        }
+    }
+</script>
