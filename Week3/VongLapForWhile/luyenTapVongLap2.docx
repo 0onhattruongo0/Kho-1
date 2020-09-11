@@ -1,0 +1,132 @@
+Bài 1: In dãy Finonaci
+
+Bài 2: Tính giai thừa của một số nguyên dương
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai thừa</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let N = +prompt("Nhập số giai thừa cần tìm: ");
+    let total = 1;
+    let count = 1;
+    for(count=1;count<=N;count++) {
+      total= total*count;
+    }
+  document.write('Tổng là: ' + total);
+  
+</script>
+
+Bài 3:
+1:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    for (let i = 0 ; i <= 5 ; i++){
+        for (let j = 0 ; j <i ; j++){
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+    
+  
+</script>
+
+2:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    for (let i = 5 ; i >= 0 ; i--){
+        for (let j = 0 ; j <i ; j++){
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+    
+  
+</script>
+
+3.
+<script>
+    let n = 5;
+    for (let i = 1 ; i <= n ; i++){
+        for (let j = 1 ; j <=n ; j++){
+            if (j<=n-i){
+                document.write('&nbsp&nbsp');
+            } else {
+                document.write('*');
+            }
+        }document.write('<br>');
+    }
+    
+  
+</script>
+
+4.
+<script>
+    let n = 5;
+    for (let i = n ; i >= 1 ; i--){
+        for (let j = 1 ; j <=n ; j++){
+            if (j<=n-i){
+                document.write('&nbsp&nbsp');
+            } else {
+                document.write('*');
+            }
+        }document.write('<br>');
+    }
+    
+  
+</script>
+
+Bài 4: In hình chữ nhật.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let n = 20;
+    for (let i = 1 ; i <= 7 ; i++){
+        for (let j = 1 ; j <= n ; j++){
+            if (i==1 || i==7){
+                document.write('*');
+            } else if (j==n || j == 1){
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }document.write('<br>');
+    }
+    
+  
+</script>
