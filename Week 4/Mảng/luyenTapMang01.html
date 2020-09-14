@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Luyện tập mảng bài 6</h3>
+    <input type="text" id="element" placeholder="Nhập 10 phần tử số nguyên" />
+    <button onclick="addElement()">Add</button>
+    <br />
+    <br />
+    <input type="text" id="soV" />Nhập số nguyên V <br />
+    <br />
+    <input type="button" onclick="searchElement()" value="Search" id="Search" />
+    <div id="result"></div>
+  </body>
+</html>
+<script>
+  let A = [];
+  let i = 0;
+
+  function addElement() {
+    A[i] = +document.getElementById("element").value;
+    i++;
+    document.getElementById("element").value = "";
+  }
+
+  function searchElement() {
+    let V = +document.getElementById("soV").value;
+    for (let j = 0; j < A.length; j++) {
+      if (V == A[j]) {
+        A.splice(j,1);
+        break;
+      }
+    }document.getElementById('result').innerHTML = 'Mảng còn lại sau khi đã xóa V là: '+ A;
+  }
+</script>
