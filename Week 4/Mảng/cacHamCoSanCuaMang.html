@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let A = ['Orange','Banana','Lemon','Apple'];
+    document.write(A.join());
+
+    let B = window.prompt();
+    let str= B.toString();
+    let result = [str[0]];
+
+    for(let i=1;i<str.length;i++) {
+        if(str[i-1]%2===0 && str[i]%2===0){
+            result.push('-', str[i]);
+        } else {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+
+    let C = 'The Quick Brown Fox';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let kq = [];
+
+    for(let i=0;i<C.length;i++) {
+        if(UPPER.indexOf(C[i]) !== -1){
+            kq.push(C[i].toLowerCase());
+        } else if (LOWER.indexOf(C[i]) !== -1) {
+            kq.push(C[i].toUpperCase());
+        } else {
+            kq.push(C[i]);
+        }
+    }
+    document.write(kq.join());
+</script>
