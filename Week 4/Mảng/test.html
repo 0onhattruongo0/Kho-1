@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!D<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,13 +6,29 @@
     <title>Document</title>
   </head>
   <body>
-    <h3>Luyện tập mảng bài 9</h3>
+    <h1>Luyện Tập Mảng 1</h1>
+    <input type="text" id="element" />
+    <button type="button" id="add" onclick="addElement()">Add</button>
+    <button type="button" id="Display" onclick="Calculation()">Display</button>
+    <div id="result"></div>
   </body>
 </html>
 <script>
-  let a = ["a","b",'c','d','e','f','g','h','i','k'];
-  let b = [1,2,3,4,5,6,7,8,9,10];
-  let c = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-  c = c.concat(b.concat(a));
-  document.write(c);
+  let array = Array();
+  let x = 0;
+
+  function addElement() {
+    array[x] = document.getElementById("element").value;
+    x++;
+    document.getElementById("elemet").value = "";
+  }
+
+  function Calculation() {
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] >= 10) {
+        count++;
+      }
+    }document.getElementById("result").innerHTML = 'Có ' + count + ' số nguyên lớn hơn 10 trong mảng.';
+  }
 </script>

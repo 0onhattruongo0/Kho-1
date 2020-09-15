@@ -1,0 +1,133 @@
+Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let a = [
+    [1, 2, 1, 24],
+    [8, 11, 9, 4],
+    [7, 0, 7, 27],
+    [7, 4, 28, 14],
+    [3, 10, 26, 7],
+  ];
+  for (let i = 0; i < a.length; i++) {
+    document.write("row " + i);
+    for (let j = 0; j < a[i].length; j++) {
+      document.write("<br>" + a[i][j]);
+    }
+    document.write("<br>");
+  }
+</script>
+
+Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+<script>
+  let a =  [ 'c', 's', 'c', '2', '6', '1' ];
+
+  document.write(a.reverse().join(""));
+</script>
+
+Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input type="text" id='add'><button onclick="add()" value='Add'>Add</button>
+      <input type="button" value="Search" id='number' onclick="search()">
+      <div id='result'></div>
+  </body>
+</html>
+<script>
+    let A = [];
+    let x = 0;
+    let count = 0;
+
+    function add() {
+        A[x] = document.getElementById('add').value;
+        document.getElementById('add').value = '';
+        x++;
+    }
+    function search() {
+        for(let i=0;i<A.length;i++) {
+            if(isNaN(A[i]) == false) {
+                count += 1;
+            }
+        }document.write(`Mảng có ${count} ký tự số trong số ${x} ký tự của mảng`);
+    }
+</script>
+
+Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input type="button" value="Search" id='number' onclick="search()">
+      <div id='result'></div>   
+  </body>
+</html>
+<script>
+    let A = 'Hôm nay đi học ở CodeGym ngày thứ tư';
+    let count = 1;
+    let x = A.length;
+
+    function search() {
+        for(let i=0;i<A.length;i++) {
+            if(A[i] == ' ') {
+                count += 1;
+            }
+        }document.write(`Chuỗi có ${count} từ`);
+    }
+</script>
+
+Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input type="text" name="" id="giatri" placeholder="Nhập chuỗi">
+      <input type="button" value="Nhập chuỗi 1" id='chuoi1' onclick="Nhapchuoi1()">
+      <input type="button" value="Nhập chuỗi 2" id='chuoi2' onclick="Nhapchuoi2()">
+      <input type="button" value="Check" id='check' onclick="check()">
+      <div id='result'></div>   
+  </body>
+</html>
+<script>
+    let A = '';
+    let B = '';
+    function Nhapchuoi1() {
+        A = document.getElementById('giatri').value;
+        document.getElementById('result').innerHTML=`Chuỗi A là ${A}`;
+        document.getElementById('giatri').value = '';
+    }
+    function Nhapchuoi2() {
+        B = document.getElementById('giatri').value;
+        document.getElementById('result').innerHTML=`Chuỗi B là ${B}`;
+        document.getElementById('giatri').value = '';
+    }
+    function check() {
+        if(A == B) {
+            document.getElementById('result').innerHTML='Hai chuỗi A và B giống nhau';
+        } else {
+            document.getElementById('result').innerHTML='Hai chuỗi A và B khác nhau';
+        }
+    }
+</script>
+
+Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )

@@ -219,6 +219,7 @@ Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyê
     for (let j = 0; j < A.length; j++) {
       if (V == A[j]) {
         A.splice(j,1);
+        j--;
     }
   }document.getElementById('result').innerHTML = 'Mảng còn lại sau khi đã xóa V là: '+ A;
   }
