@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input type="text" placeholder="Nhập tên ngôi sao" id="value">
+      <button type="button" onclick="search()">Check</button>
+      <p id='result'></p>
+  </body>
+</html>
+<script>
+  let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+  let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+  function search() {
+      let sao = document.getElementById('value').value;
+      for(let i=0;i<star.length;i++) {
+          if(star[i]==sao) {
+            let result=constellation[i];
+            document.getElementById('result').innerHTML='Tên chòm sao là '+result;
+            break;
+          } else {
+            document.getElementById('result').innerHTML='Không tìm thấy';
+          }
+      }
+  }
+</script>

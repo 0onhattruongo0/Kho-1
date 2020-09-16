@@ -1,4 +1,4 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,29 +6,22 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Luyện Tập Mảng 1</h1>
-    <input type="text" id="element" />
-    <button type="button" id="add" onclick="addElement()">Add</button>
-    <button type="button" id="Display" onclick="Calculation()">Display</button>
-    <div id="result"></div>
+    
   </body>
 </html>
 <script>
-  let array = Array();
-  let x = 0;
+  let A = [3,3,4];
+  let max = A[0];
+  let total = 0;
 
-  function addElement() {
-    array[x] = document.getElementById("element").value;
-    x++;
-    document.getElementById("elemet").value = "";
-  }
-
-  function Calculation() {
-    let count = 0;
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] >= 10) {
-        count++;
+  for(let i=0;i<A.length;i++) {
+      if (A[i]>max) {
+          max = A[i];
+          index = i;
       }
-    }document.getElementById("result").innerHTML = 'Có ' + count + ' số nguyên lớn hơn 10 trong mảng.';
+      total = total + A[i];
   }
+  let avr = total/(A.length)
+  document.write('Phần tử lớn nhất trong mảng ở vị trí ' + index + ' và có giá trị là '+ max +'<br>');
+  document.write('Giá trị trung bình của mảng là: '+avr);
 </script>

@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 10%;
+            background-color: rgb(89, 125, 190);
+        }
+        input {
+            width: 150px;
+            height: 40px;
+        }
+        .button {
+            
+        }
+        input:hover {
+            background-color: cornflowerblue;
+        }
+    </style>
   </head>
   <body>
-      <input type="text" name="" id="giatri" placeholder="Nhập phần tử mảng">
+      <h1><label for="giatri">Luyện Tập 2</label></h1>
+      <input type="text" name="" id="giatri" placeholder="Nhập phần tử mảng" style="background-color: cornsilk;"> <br>
+      <div id='button'>
       <input type="button" value="Nhập mảng A" onclick="nhapmangA()">
       <input type="button" value="Change" onclick="change()">
+        </div>
+      <div id='mangA'></div> 
       <div id='result'></div>   
   </body>
 </html>
@@ -17,7 +38,7 @@
     let x = 0
     function nhapmangA() {
         A[x] = document.getElementById('giatri').value;
-        document.getElementById('result').innerHTML=`Mảng A là ${A}`;
+        document.getElementById('mangA').innerHTML=`Mảng A là ${A}`;
         x++;
         document.getElementById('giatri').value = '';
     }
