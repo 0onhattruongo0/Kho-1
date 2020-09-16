@@ -1,0 +1,200 @@
+Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function square(a) {
+    let x = a * a;
+    return x;
+  }
+  let text = +prompt("Nhập số test: ");
+  alert(square(text));
+</script>
+
+Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+<script>
+
+  function S(a) {
+    let x = 3.14*a*a;
+    return x;
+  }
+  function C(a) {
+    let x = 2*3.14*a;
+    return x;
+  }
+  let text = +prompt("Nhập bán kính hình tròn: ");
+  alert('Chu vi hình tròn là: '+C(text));
+  alert('Diện tích hình tròn là: '+S(text));
+</script>
+
+Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+<script>
+    function giaithua(a) {
+        let sum=1;
+        for(let i=1;i<=a;i++) {
+            sum = sum*i;
+        }
+        return sum
+    }
+    let text = +prompt('Nhập số cần tính giai thừa: ');
+    alert(giaithua(text));
+</script>
+
+Bài 4:Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+<script>
+    function check(a) {
+        if(!isNaN(a) == true) {
+            return true
+        } else
+            return false
+    }
+    let text = prompt('Nhập một ký tự: ');
+    alert(check(text));
+</script>
+
+Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+    function minElement(a,b,c) {
+        if(a<b) {
+            if(a<c){
+                return a+' là số nhỏ nhất' 
+            } else {
+                return c+' là số nhỏ nhất'
+            }
+        } else if (b<c) {
+            return b+' là số nhỏ nhất'
+        } else {
+            return c+' là số nhỏ nhất'
+        }
+    }
+
+    let first = +prompt('Nhập số đầu tiên: ');
+    let second = +prompt('Nhập số thứ hai: ');
+    let third = +prompt('Nhập số thứ ba: ');
+    alert(minElement(first,second,third));
+</script>
+
+Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+<script>
+    function check(a) {
+        if(a>=0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let first = +prompt('Nhập số : ');
+    alert(check(first));
+</script>
+
+Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+    function change(a,b) {
+        let x = a;
+        a = b;
+        b = x;
+        return `Số đầu tiên là ${a} - số thứ hai là ${b}`
+      
+    }
+    let first = +prompt('Nhập số đầu tiên: ');
+    let second = +prompt('Nhập số thứ hai: ');
+    alert(change(first,second));
+</script>
+
+Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let A = [];
+   
+    function bt8(size) {
+        for(let i=0;i<size;i++) {
+        A[i] = Math.floor(Math.random()*90+10);
+        }
+        return `Mảng ${A} đảo ngược lại là: ${A.reverse()}`
+    }
+    let X = +prompt('Nhập size: ');
+    document.write(bt8(X))
+</script>
+
+Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+    let A = [1,2,3,4,4,4,5,5,6,7,8,9];
+    let count = 0;
+    let x = +prompt('Nhập X =');
+    function check(A, x){
+    for(let i=0;i<A.length;i++) {
+        if(A[i] == x) {
+            count = count +1;
+        }
+    }
+    if(count==0){
+        count = -1;
+    }
+    return count
+    }
+    document.write(check(A, x));
+</script>
+<script>
+    let A = [];
+    let count = 0;
+    let sizze = +prompt('Nhập size =');
+    let x = +prompt('Nhập X =');
+    function check(size, x){
+    for(let i=0;i<size;i++) {
+        A[i] = Math.floor(Math.random()*9+1);
+        if(A[i] == x) {
+            count = count +1;
+        }
+    }
+    if(count==0){
+        count = -1;
+    }
+    return count
+    }
+
+    document.write(check(sizze, x));
+</script>

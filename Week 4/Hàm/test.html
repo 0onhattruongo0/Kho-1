@@ -10,14 +10,14 @@
 </body>
 </html>
 <script>
-    let first = +prompt('Nhập số đầu tiên: ');
-    let second = +prompt('Nhập số thứ 2: ');
-    function compare(a,b) {
-        if(a>b) {
-            return 'tham số thứ nhất lớn hơn tham số thứ hai';
-        } else {
-            return 'tham số thứ nhất bé hơn hoặc bằng tham số thứ hai';
+    let A = [];
+   
+    function bt8(size) {
+        for(let i=0;i<size;i++) {
+        A[i] = Math.floor(Math.random()*90+10);
         }
+        return `Mảng ${A} đảo ngược lại là: ${A.reverse()}`
     }
-    alert(compare(first,second));
+    let X = +prompt('Nhập size: ');
+    document.write(bt8(X))
 </script>
