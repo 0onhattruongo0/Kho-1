@@ -10,14 +10,13 @@
 </body>
 </html>
 <script>
-    let A = [];
-   
-    function bt8(size) {
-        for(let i=0;i<size;i++) {
-        A[i] = Math.floor(Math.random()*90+10);
+    function giaithua(sum) {
+        let a=1;
+        for(let i=1;i<=sum;i++) {
+            a = a*i;
         }
-        return `Mảng ${A} đảo ngược lại là: ${A.reverse()}`
+        return a
     }
-    let X = +prompt('Nhập size: ');
-    document.write(bt8(X))
+    let text = +prompt('Nhập số cần tính giai thừa: ');
+    alert(giaithua(text));
 </script>
