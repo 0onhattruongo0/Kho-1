@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="QuangCanvas"
+      width="500px"
+      height="300px"
+      style="border: 3px solid aqua"
+    ></canvas>
+  </body>
+</html>
+<script>
+  function Rectangle(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+
+    this.area = function () {
+      return width * height;
+    };
+    this.perimeter = function () {
+      return (width + height) * 2;
+    };
+    this.draw = function() {
+    let ctx = document.getElementById("QuangCanvas").getContext("2d");
+    ctx.fillStyle = "green";
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  };
+  }
+
+  let rectangle1 = new Rectangle(10,10,300,100);
+  rectangle1.draw();
+  document.write("<br>"+"Diện tích là: "+rectangle1.area()+"<br>"+"Chu vi là: "+rectangle1.perimeter());
+
+
+</script>

@@ -90,6 +90,15 @@ Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguy�
 </script>
 
 Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
 <script>
     function check(a) {
         if(a>=0) {
@@ -98,9 +107,15 @@ Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào
             return false;
         }
     }
-
-    let first = +prompt('Nhập số : ');
-    alert(check(first));
+    
+    function checkInt() {
+        let number = 0;
+        do {
+          number = +prompt('Nhập số : ');
+        } while(!Number.isInteger(number))
+        return number;
+    }
+    document.write(check(checkInt()));
 </script>
 
 Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.

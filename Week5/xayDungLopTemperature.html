@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Temperature(c){
+        this.c = c;
+        this.toF = function(){
+            return (c*9/5)+32;
+        }
+        this.toK = function(){
+            return c+273;
+        }
+    }
+
+    let t1 = new Temperature(25);
+    document.write("Độ F là: "+t1.toF()+"<br>"+"Độ K là: "+t1.toK());
+</script>
