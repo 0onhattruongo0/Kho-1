@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let Battery = function (energy) {
+    this.energy = energy;
+
+    this.setEnergy = function (energy) {
+      this.energy = energy;
+    };
+    this.getEnergy = function () {
+      return this.energy;
+    };
+    this.decreaseEnergy = function () {
+      if (this.energy > 0) {
+        this.energy--;
+      }
+    };
+  };
+  let FlashLamp = function () {
+
+    this.setBattery = function (Battery) {
+      this.Battery = Battery;
+    };
+    this.getbatteryinfo = function () {
+      return this.Battery.getEnergy();
+    };
+    this.light = function () {
+      if (this.status) {
+        document.write("Lighting");
+      } else {
+        document.write("Not lighting");
+      }
+    };
+    this.turnOn = function () {
+      this.status = true;
+    };
+    this.turnOff = function () {
+      this.status = false;
+    };
+  };
+
+  let pin = new Battery();
+  pin.setEnergy(50);
+
+  let den = new FlashLamp();
+  den.setBattery(pin);
+
+  document.write("Battery info:" + den.getbatteryinfo() + "<br/>");
+  den.light();
+
+  document.write("Turn on<br/>");
+  den.turnOn();
+  den.light();
+  document.write("Battery info:" + den.getbatteryinfo() + "<br/>");
+
+  document.write("Turn off<br/>");
+  den.turnOff();
+  den.light();
+</script>

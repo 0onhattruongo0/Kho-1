@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let Apple = function(){
+        this.weight = 10;
+        this.getweight = function(){
+            return this.weight
+        }
+        this.isEmpty = function(){
+            if(this.weight>0){
+                return false;
+            } else {
+                return true;
+            }
+        }
+        this.decrease = function(){
+            if (this.weight > 0) {
+            this.weight--;
+        }
+        }
+    }
+
+    let Human = function(name, gender, weight){
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.setApple = function(Apple){
+            this.Apple = Apple;
+        }
+        this.isMale = function(){
+            return this.gender=='man';
+        }
+        this.setGender = function(gender){
+            return this.gender = gender;
+        }
+        this.checkApple = function(){
+            return this.Apple.isEmpty();
+        }
+        this.eat = function(){
+            if(!this.Apple.isEmpty()){
+            this.Apple.decrease();
+            this.weight++;
+            }
+        }
+        this.say = function(String){
+            console.log(String);
+        }
+        this.getName = function(){
+            return this.name;   
+        }
+        this.setName = function(name){
+            this.name = name;
+        }
+        this.getWeight = function(){
+            return this.weight
+        }
+        this.setWeight = function(int){
+            this.weight = int;
+        }
+    }
+
+    let tao = new Apple();
+    let Adam = new Human('Adam', 'man', 70);
+    Adam.setApple(tao);
+    let Eva = new Human('Eva', 'woman', 55);
+    Eva.setApple(tao);
+</script>

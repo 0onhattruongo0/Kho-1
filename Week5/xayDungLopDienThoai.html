@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 <script>
-    
+  function Mobile(pin) {
+    this.pin = pin;
+    this.mess = [];
+    this.savemess = [];
+    this.sendmess = [];
+    this.status = true;
+    this.status = function () {
+      if (this.status) {
+        return "Máy đã bật";
+      } else {
+        return "Máy chưa bật";
+      }
+    };
+    this.changeStatus = function () {
+      if (this.status) {
+        this.status = false;
+      } else {
+        this.status = true;
+      }
+      this.pin--;
+      return this.status();
+    };
+    this.Mess = function (tinhan) {
+      if (this.status) {
+        this.mess.push(tinhan);
+        this.pin--;
+      }
+    };
+    this.saveMess = function () {
+      if (this.status) {
+        this.savemess.push(this.mess);
+        this.pin--;
+      }
+    };
+    this.chargePin = function () {
+      if (this.status && this.pin < 100) {
+        this.pin = 100;
+        this.pin--;
+        return this.pin;
+      }
+    };
+    this.sendMess = function (receive) {
+      if (this.status) {
+        let send = [this.mess];
+        receive.savemess.push(send);
+        this.sendmess.push(this.mess);
+        this.mess = [];
+        this.pin--;
+      }
+    };
+    this.watchSaveMess = function () {
+      if (this.status) {
+        this.pin--;
+        return this.savemess;
+      }
+    };
+    this.watchSendMess = function () {
+      if (this.status) {
+        this.pin--;
+        return this.sendmess;
+      }
+    };
+  }
+
+  let samsung = new Mobile(60);
+  let iphone = new Mobile(70);
 </script>
