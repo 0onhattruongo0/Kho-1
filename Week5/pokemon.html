@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   let Pokemon = function (name, heal, attackmark, defendmark) {
+  //     this.name = name;
+  //     this.heal = heal;
+  //     this.attackmark = attackmark;
+  //     this.defendmark = defendmark;
+
+  //     this.getAttack = function () {
+  //       return Math.floor(Math.random() * this.attackmark);
+  //     };
+  //     this.getDefend = function () {
+  //       return Math.floor(Math.random() * this.defendmark);
+  //     };
+  //   };
+  class Pokemon {
+    constructor(name, heal, attackmark, defendmark) {
+      this.name = name;
+      this.heal = heal;
+      this.attackmark = attackmark;
+      this.defendmark = defendmark;
+    }
+    getAttack() {
+      return Math.floor(Math.random() * this.attackmark);
+    }
+    getDefend() {
+      return Math.floor(Math.random() * this.defendmark);
+    }
+  }
+
+  //   let Trainee = function (name, pokemon) {
+  //     this.name = name;
+  //     this.pokemon = pokemon;
+  //     this.setPokemon = function (pokemon) {
+  //       this.pokemon = pokemon;
+  //     };
+  //   };
+
+  class Trainee {
+    constructor(name, pokemon) {
+      this.name = name;
+      this.pokemon = pokemon;
+    }
+    setPokemon(pokemon) {
+      this.pokemon = pokemon;
+    }
+  }
+
+  //   let Battle = function () {
+  //     this.startBattle = function (trainee1, trainee2) {
+  //       this.trainee1 = trainee1;
+  //       this.trainee2 = trainee2;
+  //     };
+  //     this.getBattleResult = function () {
+  //       let dam1 = 0;
+  //       let dam2 = 0;
+  //       while (this.trainee1.pokemon.heal > 0 && this.trainee2.pokemon.heal > 0) {
+  //         dam1 =
+  //           this.trainee2.pokemon.getAttack() - this.trainee1.pokemon.getDefend();
+  //         dam2 =
+  //           this.trainee1.pokemon.getAttack() - this.trainee2.pokemon.getDefend();
+  //         if (dam1 >= 0) {
+  //           this.trainee1.pokemon.heal -= dam1;
+  //           console.log(`${this.trainee2.pokemon.name} đã gây ${dam1} sát thương vào ${this.trainee1.pokemon.name}`);
+  //           console.log(`Máu hiện tại của ${this.trainee1.pokemon.name} là ${this.trainee1.pokemon.heal}`);
+  //         }
+  //         if (dam2 >= 0) {
+  //           this.trainee2.pokemon.heal -= dam2;
+  //           console.log(`${this.trainee1.pokemon.name} đã gây ${dam2} sát thương vào ${this.trainee2.pokemon.name}`);
+  //           console.log(`Máu hiện tại của ${this.trainee1.pokemon.name} là ${this.trainee1.pokemon.heal}`);
+  //         }
+  //       }
+  //       if (this.trainee1.pokemon.heal <= 0) {
+  //         return `${this.trainee1.name} đã thua`;
+  //       } else if (this.trainee2.pokemon.heal <= 0) {
+  //         return `${this.trainee2.name} đã thua`;
+  //       }
+  //     };
+  //   };
+
+  class Battle {
+    startBattle(trainee1, trainee2) {
+      this.trainee1 = trainee1;
+      this.trainee2 = trainee2;
+    }
+    getBattleResult() {
+      let dam1 = 0;
+      let dam2 = 0;
+      while (this.trainee1.pokemon.heal > 0 && this.trainee2.pokemon.heal > 0) {
+        dam1 =
+          this.trainee2.pokemon.getAttack() - this.trainee1.pokemon.getDefend();
+        dam2 =
+          this.trainee1.pokemon.getAttack() - this.trainee2.pokemon.getDefend();
+        if (dam1 >= 0) {
+          this.trainee1.pokemon.heal -= dam1;
+          console.log(
+            `${this.trainee2.pokemon.name} đã gây ${dam1} sát thương vào ${this.trainee1.pokemon.name}`
+          );
+          console.log(
+            `Máu còn lại của ${this.trainee1.pokemon.name} là ${this.trainee1.pokemon.heal}`
+          );
+        }
+        if (dam2 >= 0) {
+          this.trainee2.pokemon.heal -= dam2;
+          console.log(
+            `${this.trainee1.pokemon.name} đã gây ${dam1} sát thương vào ${this.trainee2.pokemon.name}`
+          );
+          console.log(
+            `Máu còn lại của ${this.trainee2.pokemon.name} là ${this.trainee2.pokemon.heal}`
+          );
+        }
+      }
+      if (this.trainee1.pokemon.heal <= 0) {
+        return `Kết quả cuộc chiến là ${this.trainee1.name} đã thua`;
+      }
+      if (this.trainee2.pokemon.heal <= 0) {
+        return `Kết quả cuộc chiến là ${this.trainee2.name} đã thua`;
+      }
+    }
+  }
+
+  let luffy = new Pokemon("luffy", 200, 40, 20);
+  let kaido = new Pokemon("kaido", 300, 60, 30);
+
+  let leesin = new Trainee("leesin");
+  leesin.setPokemon(luffy);
+  let javanIV = new Trainee("javanIV");
+  javanIV.setPokemon(kaido);
+
+  let trongtai = new Battle();
+</script>

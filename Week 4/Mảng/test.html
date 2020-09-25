@@ -6,22 +6,23 @@
     <title>Document</title>
   </head>
   <body>
-    
+    <p id='caro'></p>
   </body>
 </html>
 <script>
-  let A = [3,3,4];
-  let max = A[0];
-  let total = 0;
+  function getTotalX(a, b) {
+    let validCount = 0;
+    
+    for (let x = 1; x <= 100; x++) {
+        if (a.every(int => (x % int == 0))) {
+            if (b.every(int => (int % x == 0))) {
+                validCount++;
+            }
+        }
+    }
+    return validCount;
+}
+let a = [2,4];
+let b = [16, 32, 96];
 
-  for(let i=0;i<A.length;i++) {
-      if (A[i]>max) {
-          max = A[i];
-          index = i;
-      }
-      total = total + A[i];
-  }
-  let avr = total/(A.length)
-  document.write('Phần tử lớn nhất trong mảng ở vị trí ' + index + ' và có giá trị là '+ max +'<br>');
-  document.write('Giá trị trung bình của mảng là: '+avr);
 </script>
