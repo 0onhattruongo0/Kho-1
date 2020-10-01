@@ -54,15 +54,15 @@
   visibility: hidden;
   z-index: -999;
 }
-/* slidershow middle */
 
+
+/* slidershow middle */
 .textAboutUs {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   text-align: center;
   width: 98%;
 }
-
 
 header {
   padding: 0 25px;
@@ -76,11 +76,7 @@ header {
   text-align: justify;
 }
 
-#footer {
-  background-image: url("./img/ảnh\ 7.jpg");
-  background-size: 100%;
-  background-repeat: repeat-x;
-}
+/* Chân trang */
 .footer {
   background-color: teal;
   text-align: center;
@@ -155,7 +151,7 @@ table div p {
   flex-wrap: wrap;
 }
 .column {
-  -ms-flex: 25%;
+  /* -ms-flex: 25%; */
   flex: 25%;
   max-width: 25%;
   margin: 0;
@@ -167,7 +163,7 @@ table div p {
 }
 
 
-/* Slide */
+/* Slide 4 chi nhánh */
 .row > .column {
   padding: 0 8px;
 }
@@ -183,7 +179,7 @@ table div p {
   width: 25%;
 }
 
-/* The Modal (background) */
+/* Modal*/
 .modal {
   display: none;
   position: fixed;
@@ -207,7 +203,7 @@ table div p {
   max-width: 1200px;
 }
 
-/* The Close Button */
+/* Nút đóng*/
 .close {
   color: white;
   position: absolute;
@@ -232,7 +228,7 @@ table div p {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* Nút qua phải qua trái */
 .prev,
 .next {
   cursor: pointer;
