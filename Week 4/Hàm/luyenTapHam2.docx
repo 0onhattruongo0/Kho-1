@@ -177,23 +177,6 @@ Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bấ
   <body></body>
 </html>
 <script>
-    let A = [1,2,3,4,4,4,5,5,6,7,8,9];
-    let count = 0;
-    let x = +prompt('Nhập X =');
-    function check(A, x){
-    for(let i=0;i<A.length;i++) {
-        if(A[i] == x) {
-            count = count +1;
-        }
-    }
-    if(count==0){
-        count = -1;
-    }
-    return count
-    }
-    document.write(check(A, x));
-</script>
-<script>
     let A = [];
     let count = 0;
     let sizze = +prompt('Nhập size =');

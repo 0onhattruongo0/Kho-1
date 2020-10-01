@@ -11,6 +11,9 @@
 </html>
 <script>
     function isPrime(number) {
+        if(number < 2){
+            return false
+        }
         if(number == 2) {
             return true
         }
@@ -22,9 +25,14 @@
         return true
     }
 
-    for(let j=2;j<1000;j++) {
-        if(isPrime(j)==true) {
-            document.write(j+',');
+    function printPrime(arr){
+    for(let j=0;j<arr.length;j++) {
+        if(isPrime(arr[j])==true) {
+            document.write(arr[j]+',');
         }
     }
+    }
+
+    let A = [1,3,5,7,8,9,11];
+    printPrime(A);  
 </script>

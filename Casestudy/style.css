@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+.header {
+  padding: 0 20px;
+  height: 50px;
+  background: rgb(63, 62, 62);
+  color: white;
+  width: 100%;
+  position: fixed;
+  top:0;
+  margin: 0 0 30px 0;
+  z-index: 1000;
+}
+.logo {
+  line-height: 50px;
+  float: left;
+}
+.menu {
+  float: right;
+  line-height: 50px;
+  padding: 0 25px;
+}
+.menu a {
+  color: white;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.5s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.menu a:hover,
+.show-menu-btn,
+.hide-menu-btn {
+  color: #7f8c8d;
+}
+.show-menu-btn {
+  float: right;
+}
+.show-menu-btn i {
+  line-height: 50px;
+  margin-right: 25px;
+}
+#check {
+  position: absolute;
+  visibility: hidden;
+  z-index: -999;
+}
+/* slidershow middle */
+
+.textAboutUs {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  width: 98%;
+}
+
+
+header {
+  padding: 0 25px;
+}
+.content img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px 0;
+}
+.content p {
+  text-align: justify;
+}
+
+#footer {
+  background-image: url("./img/ảnh\ 7.jpg");
+  background-size: 100%;
+  background-repeat: repeat-x;
+}
+.footer {
+  background-color: teal;
+  text-align: center;
+  padding: 10px 10px;
+}
+.footer a {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Bảng menu 12 món */
+table {
+  padding: 10px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+table tr td {
+  padding: 10px;
+}
+table div {
+  float: left;
+}
+.thucdon img {
+  width: 80px;
+  float: right;
+}
+table div p {
+  display: block;
+  float: bottom;
+}
+.thucdon {
+  background-image: url("./img/nền\ menu.jpg");
+  color: white;
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+/* Đặt bàn */
+.formdatban {
+  background-color: #cc8e35;
+  /* height: 600px; */
+  padding: 20px 0 20px 0;
+}
+.settable {
+  color: white;
+  max-width: 100%;
+  text-align: center;
+}
+.input {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 50%;
+}
+.button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+.button {
+  padding: 10px;
+}
+
+/* Conten 4 cột ảnh */
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  margin: 0;
+}
+.column img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+/* Slide */
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Next button */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover button */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.slide {
+  width: 100%;
+}
+.wrap{
+  margin-top: 50px;
+}

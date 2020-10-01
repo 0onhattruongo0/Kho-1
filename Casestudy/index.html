@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./styleReponsive.css"
+    />
+  </head>
+  <body>
+
+    <!-- Thanh menu -->
+    <div class="header" class="home">
+      <h2 class="logo">DQ COFFEE</h2>
+      <input type="checkbox" id="check" />
+      <label for="check" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+      <ul class="menu">
+        <a href="#">HOME</a>
+        <a href="#thucdon">MENU</a>
+        <a href="#about">ABOUT</a>
+        <a href="#settable">SET TABLE</a>
+        <label for="check" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+    </div>
+
+    <div class="wrap">
+  <div class="content">
+    <div class="row">
+      <div class="column">
+        <img src="./img/ảnh tải về/home-1-gallery-1.jpg" style="width:100%">
+        <img src="./img/ảnh tải về/home-1-gallery-6.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./img/ảnh tải về/home-1-gallery-4-500x1000.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./img/ảnh tải về/home-1-gallery-2.jpg" style="width:100%">
+        <img src="./img/ảnh tải về/home-1-gallery-3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./img/ảnh tải về/home-1-gallery-5.jpg" style="width:100%">
+        <img src="./img/ảnh tải về/home-1-gallery-6.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="about">
+    <h1><center>About Us</center></h1>
+    <p class="textAboutUs">
+      Việt Nam là nước có sản lượng cà phê lớn thứ 2 thế giới nhưng người dân
+      vẫn còn phải uống cà phê trộn hóa chất. Nông dân chỉ quan tâm đến số
+      lượng và bỏ qua chất lượng, rồi phải bán với giá thị trường bấp bênh.
+      Thành phẩm kém chất lượng đến nỗi phải trộn hóa chất màu mùi giả hương
+      vị thật của cà phê để đánh lạc hướng người tiêu dùng thiếu thông tin.
+      Trong khi đó trên thế giới, những nước sản xuất cà phê có tiếng như
+      Ethiopia, Panama, Indonesia…đều có thể bán cà phê của họ giá gấp đôi gấp
+      ba lần cà phê Việt Nam.
+    </p>
+    <p class="textAboutUs">
+      Sau 4 năm hoạt động, DQCoffee đã hợp tác với 60 nông hộ, và đã mở 4 chi
+      nhánh khắp TP.Huế và Tp.Đà Nẵng và bán ra 2.000 ly cà phê mỗi ngày.
+      Chúng tôi càng vững tin vào điều mình làm và hướng tới 10 điểm bán với 1
+      triệu ly cà phê mỗi năm.
+    </p>
+    <div class="row">
+      <div class="column">
+        <img
+          src="./img/ảnh 7.jpg"
+          style="width: 100%"
+          onclick="openModal();currentSlide(1)"
+          class="hover-shadow cursor"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="./img/ảnh 6.jpg"
+          style="width: 100%"
+          onclick="openModal();currentSlide(2)"
+          class="hover-shadow cursor"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="./img/ảnh 3.jpg"
+          style="width: 100%"
+          onclick="openModal();currentSlide(3)"
+          class="hover-shadow cursor"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="./img/ảnh 2.png"
+          style="width: 100%"
+          onclick="openModal();currentSlide(4)"
+          class="hover-shadow cursor"
+        />
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()"
+        ><i class="fas fa-window-close"></i
+      ></span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./img/ảnh 7.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="./img/ảnh 6.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="./img/ảnh 3.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="./img/ảnh 2.png" style="width: 100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"
+          ><i class="fas fa-backward"></i
+        ></a>
+        <a class="next" onclick="plusSlides(1)"
+          ><i class="fas fa-forward"></i
+        ></a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./img/ảnh 7.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="Chi nhánh 1 - 28 Nguyễn Tri Phương, phường Phú Nhuận, TP Huế"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./img/ảnh 6.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Chi nhánh 2 - 15 Bà Triệu, phường Xuân Phú, TP Huế"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./img/ảnh 3.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Chi nhánh 3 - 66 Lê Lợi, phường Phú Hội, TP Huế"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./img/ảnh 2.png"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Chi nhánh 4 - 41 Lê Duẩn, quận Hải Châu, TP Đà Nẵng"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="textAboutUs">
+      Khắp nơi trên đất nước Việt Nam có thể uống được cà phê ngon giá phải
+      chăng không phải là một mục tiêu dễ dàng. Thế nhưng chúng tôi có những
+      người nông dân sẵn lòng thay đổi phương pháp canh tác, những đối tác
+      đồng hành và những khách hàng trung thành đồng hành. Và mỗi ngày, chúng
+      tôi dần vững tin hơn vào điều mình làm.
+    </p>
+  </div>
+ 
+
+  <div id="thucdon">
+    <div class="thucdon">
+      <h1 style="text-align: center;">THỰC ĐƠN</h1>
+      <h3><center><i>Hãy chọn một món đồ uống ngon nhất</i></center></h3>
+      <div class="">
+        <table>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/Americano.jpg" alt="" />
+              <div class="mota">
+                AMERICANO <br> 35.000 vnđ
+              </div>  <br><br>
+              
+            </td>
+            <td>
+              <img src="./img/Đồ uống/Cappuccino.jpg" alt="" />
+              <div class="mota">
+                CAPPUCCINO <br> 35.000 vnđ
+              </div>  <br><br>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/Latte.jpg" alt="" />
+              <div class="mota">LATTE <br> 55.000 vnđ</div>
+        
+            </td>
+            <td>
+              <img src="./img/Đồ uống/Mocha.jpg" alt="" />
+              <div class="mota">MOCHA <br> 55.000 vnđ</div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/Caramel Macchiato.jpg" alt="" />
+              <div class="mota">CARAMEL MACCHIATO <br> 50.000 vnđ</div>
+              
+            </td>
+            <td>
+              <img src="./img/Đồ uống/Expresso Macchiato.jpg" alt="" />
+              <div class="mota">EXPRESSO MACCHIATO <br> 40.000 vnđ</div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/Ice Cafe Mocha.jpg" alt="" />
+              <div class="mota">ICE CAFE MOCHA <br> 55.000 vnđ</div>
+              
+            </td>
+            <td>
+              <img src="./img/Đồ uống/Ice Caramel Latte.jpg" alt="" />
+              <div class="mota">ICE CARAMEL LATTE <br> 55.000 vnđ</div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/Ice Smoker Latte.jpg" alt="" />
+              <div class="mota">ICE SMOKER LATTE <br> 55.000 vnđ</div>
+              
+            </td>
+            <td>
+              <img src="./img/Đồ uống/ICED GINGERBREAD LATTE.jpg" alt="" />
+              <div class="mota">ICE GINGERBREAD LATTE <br> 45.000 vnđ</div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/Đồ uống/White Chocolate Mocha.jpg" alt="" />
+              <div class="mota">WHITE CHOCOLATE MOCHA <br> 45.000 vnđ</div>
+              
+            </td>
+            <td>
+              <img src="./img/Đồ uống/Vanilla Latte.jpg" alt="" />
+              <div class="mota">VANILLA LATTE <br> 55.000 vnđ</div>
+              
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><i><center>Chúc các bạn ngon miệng !!!</center></i></h3>
+    </div>
+  </div>
+
+    <div class="formdatban" id="settable">
+      <h1 style="text-align: center; color: white;">ĐẶT BÀN</h1>
+      <div class="settable">
+          <div class="">
+            <h5 class=""><span>BẠN CÓ THỂ ĐẶT BÀN NGAY TẠI ĐÂY</span></h5>
+            <p>Hãy để lại một vài thông tin cá nhân cơ bản ngay tại form bên dưới để chúng tôi có thể sắp xếp cho các bạn tốt nhất nhé</p>
+            <p><span>Bắt đầu ngay thôi!</span> </p>
+            <p><strong></strong>và nhớ để lại số điện thoại để chúng tôi xác nhận hoặc liên hệ với chúng tôi qua số điện thoại: 0912867*** nhé!</p>
+            <form action="" target="_blank">
+              <p><input class="input" type="text" placeholder="Name"></p>
+              <p><input class="input" type="number" placeholder="How many people"></p>
+              <p><input class="input" type="text" placeholder="Message \ Phone"></p>
+              <p><input class="input" type="datetime-local" placeholder="Date and time" value="2020-10-01T20:00"></p>
+              <p><button class="button" type="submit">SEND MESSAGE</button></p>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-facebook-messenger"></i></a>
+        <a><i class="fab fa-pinterest"></i></a>
+        <p>CaseStudy © 2020 Dang Quang</p>
+    </div>
+  </div>
+</html>
+<script src="./json.js"></script>
