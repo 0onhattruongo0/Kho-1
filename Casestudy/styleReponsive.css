@@ -30,6 +30,7 @@
   }
 }
 
+/* Reponsive Table */
 @media screen and (max-width: 650px) {
   table {
     padding: 10px;
@@ -46,6 +47,7 @@
   }
 }
 
+/* Reponsive Content */
 @media screen and (max-width: 800px) {
     .column {
       -ms-flex: 50%;
