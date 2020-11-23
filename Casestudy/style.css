@@ -6,7 +6,7 @@
 }
 .header {
   padding: 0 20px;
-  height: 50px;
+  height: 500px;
   background: rgb(63, 62, 62);
   color: white;
   width: 100%;
@@ -21,7 +21,7 @@
 }
 .menu {
   float: right;
-  line-height: 50px;
+  line-height: 500px;
   padding: 0 25px;
 }
 .menu a {
@@ -113,7 +113,7 @@ table div p {
   background-image: url("./img/nền\ menu.jpg");
   color: white;
   background-size: cover;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
 }
 
 /* Đặt bàn */
@@ -145,9 +145,9 @@ table div p {
 
 /* Conten 4 cột ảnh */
 .row {
-  display: -ms-flexbox;
+  /* display: -ms-flexbox; */
   display: flex;
-  -ms-flex-wrap: wrap;
+  /* -ms-flex-wrap: wrap; */
   flex-wrap: wrap;
 }
 .column {
